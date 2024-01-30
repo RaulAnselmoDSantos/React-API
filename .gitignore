@@ -1,0 +1,7 @@
+# Arquivos e pastas específicas
+node_modules/
+/site/alfood/node_modules
+
+# Outros exemplos
+.DS_Store
+.env
