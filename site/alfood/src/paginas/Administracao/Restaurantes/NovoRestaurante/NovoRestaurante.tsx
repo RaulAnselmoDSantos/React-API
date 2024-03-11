@@ -10,12 +10,16 @@ const NovoRestaurante = () => {
     evento.preventDefault();
     
     axios.post<IRestaurante>('http://localhost:8000/api/v2/restaurantes/', 
-        {  
-            nome: nomeRestaurante
-        })
-            .then( () => {
-                alert("Restaurante Cadastrado");
-            })
+      {  
+        nome: nomeRestaurante
+      }
+    )
+      .then( () => {
+        alert("Restaurante Cadastrado");
+      })
+      .catch((erro : any) => {
+        console.log(erro);
+      })
   };
 
   return (
