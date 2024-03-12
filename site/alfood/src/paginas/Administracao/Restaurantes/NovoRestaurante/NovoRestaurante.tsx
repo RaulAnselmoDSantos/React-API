@@ -34,18 +34,20 @@ const NovoRestaurante = () => {
   };
 
   return (
-    <form onSubmit={onSubmiterForm}>
-      <TextField
-        value={nomeRestaurante}
-        onChange={(evento) => setNomeRestaurante(evento.target.value)}
-        id="outlined-basic"
-        label="Nome do Restaurante"
-        variant="outlined"
-      />
-      <Button type="submit" variant="outlined">
-        Salvar
-      </Button>
-    </form>
+    <div>
+      <form onSubmit={onSubmiterForm}>
+        <TextField
+          value={nomeRestaurante}
+          onChange={(evento) => setNomeRestaurante(evento.target.value)}
+          id="outlined-basic"
+          label="Nome do Restaurante"
+          variant="outlined"
+        />
+        <Button type="submit" variant="outlined">
+          Salvar
+        </Button>
+      </form>
+    </div>
   );
 };
 
