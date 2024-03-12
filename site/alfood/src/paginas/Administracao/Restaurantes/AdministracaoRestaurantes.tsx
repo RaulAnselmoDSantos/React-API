@@ -31,7 +31,7 @@ const AdministracaoRestaurantes = () => {
                     {restaurantes.map (restaurante => 
                         <TableRow key={restaurante.id}>
                             <TableCell>{restaurante.nome}</TableCell>
-                            <TableCell> <Link to={""}>Editar</Link> </TableCell>
+                            <TableCell> <Link to={`/admin/restaurantes/${restaurante.id}`}>[Editar]</Link> </TableCell>
                         </TableRow>)}
                 </TableBody>
             </Table>
