@@ -19,8 +19,24 @@ const NovoRestaurante = () => {
 
   const onSubmiterForm = (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
-    
-    axios.post<IRestaurante>('http://localhost:8000/api/v2/restaurantes/', 
+
+    if(parametros.id){
+
+      axios.put<IRestaurante>(`http://localhost:8000/api/v2/restaurantes/${parametros.id}/`, 
+      {  
+        nome: nomeRestaurante
+      }
+    )
+      .then( () => {
+        alert("Restaurante Atualizado com sucesso");
+      })
+      .catch((erro : any) => {
+        console.log(erro);
+        alert("Ouve um problema ao atualizar o nome do Restaurante");
+      })
+
+    }else{
+      axios.post<IRestaurante>('http://localhost:8000/api/v2/restaurantes/', 
       {  
         nome: nomeRestaurante
       }
@@ -30,7 +46,11 @@ const NovoRestaurante = () => {
       })
       .catch((erro : any) => {
         console.log(erro);
+        alert("Ouve um problema ao cadastrar o Restaurante");
       })
+    }
+    
+    
   };
 
   return (
