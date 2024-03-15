@@ -18,6 +18,8 @@ const AdministracaoRestaurantes = () => {
         })
     }, [] )
 
+
+
     const excluirRestaurante = (restauranteParaExclusao: IRestaurante) => {
         axios.delete(`http://localhost:8000/api/v2/restaurantes/${restauranteParaExclusao.id}/`)
             .then(() => {
