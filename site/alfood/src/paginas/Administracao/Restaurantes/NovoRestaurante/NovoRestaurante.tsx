@@ -10,8 +10,6 @@ import { useEffect, useState } from "react";
 import IRestaurante from "../../../../interfaces/IRestaurante";
 import { useParams } from "react-router-dom";
 import httpV2 from "../../../../http/index";
-import NavBar from "../../NavBar/NavBar";
-
 
 const NovoRestaurante = () => {
   const parametros = useParams();
@@ -59,24 +57,25 @@ const NovoRestaurante = () => {
 
   return (
     <>
-
-      <NavBar></NavBar>
-
       <Box>
-        <Container maxWidth='lg' sx={{mt:'1'}}>
-          <Paper sx={{ mt: '10px'}}>
+        <Container maxWidth="lg" sx={{ mt: "1" }}>
+          <Paper sx={{ mt: "10px" }}>
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                p:'10px'
+                p: "10px",
               }}
             >
               <Typography component={"h1"} variant={"h6"}>
                 Adicionar Restaurante
               </Typography>
-              <Box component={"form"} sx={{width :'100%'}} onSubmit={onSubmiterForm}>
+              <Box
+                component={"form"}
+                sx={{ width: "100%" }}
+                onSubmit={onSubmiterForm}
+              >
                 <TextField
                   value={nomeRestaurante}
                   onChange={(evento) => setNomeRestaurante(evento.target.value)}
