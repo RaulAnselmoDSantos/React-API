@@ -16,6 +16,16 @@ export default function NavBar(){
                   Novos Restaurantes
                 </Button>
               </Link>
+              <Link component={RouterLink} to={'/admin/pratos'}>
+                <Button sx={{ my: 2, color: "white" }}>
+                  Pratos
+                </Button>
+              </Link>
+              <Link component={RouterLink} to={'/admin/pratos/Novos'}>
+                <Button sx={{ my: 2, color: "white" }}>
+                  Pratos Novos
+                </Button>
+              </Link>
             </Box>
           </Toolbar>
         </Container>
